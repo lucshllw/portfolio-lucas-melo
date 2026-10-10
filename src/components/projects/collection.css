@@ -1,0 +1,56 @@
+/* The collection has its own visual system; no global layout overrides. */
+.authored-collection .projects-world { opacity: 1; inset: 0 30% 0 -3%; }
+.authored-collection .project-frame { grid-template-columns: 66% 34%; }
+.authored-collection .project-context.project-context { padding-left: 22px; }
+.authored-collection[data-layout="overlap"] .project-frame:not(.is-selected) .project-context {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.authored-collection .project-context h3 { font-size: clamp(32px, 3.2vw, 50px); letter-spacing: -.045em; }
+.authored-collection .project-index button { position: relative; border-left: 1px solid #545b6345; border-radius: 0; }
+.authored-collection .project-index button[aria-selected="true"] { border-left-color: #e4e7eb; background: linear-gradient(90deg,#a6aeb713,transparent); }
+.authored-collection .project-index button strong { font-size: 16px; font-weight: 550; }
+.authored-collection .project-index button .project-visited { position: absolute; top: 15px; right: 8px; color: #c7cdd3; font-size: 12px; }
+.authored-collection .game-preview { min-height: min(57svh, 530px); height: 100%; }
+.authored-collection .game-preview-caption { padding: 28px 16px 20px; width: 100%; background: linear-gradient(0deg,#050505 4%,#050505da 48%,#05050500); }
+.authored-preview { position: relative; min-height: min(57svh,530px); display: flex; align-items: flex-end; justify-content: center; isolation: isolate; overflow: hidden; }
+.authored-preview .game-preview-caption { position: relative; width: 100%; z-index: 2; }
+.authored-field { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.authored-field path { fill: none; stroke: #b8c2cd; stroke-width: 1.1; opacity: .7; }
+.authored-preview-correntes .authored-field { transform: rotate(-12deg) scale(1.08); }
+.authored-preview-correntes .authored-field path { stroke-dasharray: 170 26 12 26; animation: collection-current 16s linear infinite; }
+.authored-preview-correntes .authored-field path:nth-child(3n) { opacity: .25; stroke-width: 2; }
+.authored-preview-materia .authored-field { transform: rotate(-25deg) scale(.9); filter: drop-shadow(0 4px 5px #000); }
+.authored-preview-materia .authored-field path { stroke-width: 6; opacity: .9; stroke: #909ba6; }
+.authored-preview-materia .authored-field path:nth-child(3n) { stroke: #dbe1e7; stroke-width: 3; }
+.authored-preview-materia .authored-field { animation: collection-matter 12s ease-in-out infinite alternate; }
+.authored-preview[data-active="false"] .authored-field, .authored-preview[data-active="false"] .authored-field path { animation-play-state: paused; }
+.fenda-fallback { position: absolute; inset: 4% 12% 16%; width: 76%; height: 80%; fill: #aeb8c3; stroke: #edf2f7; stroke-width: 2; filter: drop-shadow(20px 20px 12px #000); }
+.case-page > .authored-preview { min-height: 580px; height: 62svh; max-height: 780px; }
+.case-page > .authored-preview .authored-field { max-width: 800px; left: 50%; transform: translateX(-50%) rotate(-15deg); }
+.case-page .case-media-empty { color: var(--muted); }
+.gallery-page .fenda-controls { display: grid; grid-template-columns: repeat(2,minmax(120px,1fr)); gap: 14px 20px; width: min(480px,100%); }
+.gallery-page .fenda-controls label { display: grid; gap: 8px; font-size: 12px; color: var(--silver); }
+.gallery-page .fenda-controls input { width: 100%; }
+.gallery-page .fenda-controls button { min-height: 40px; }
+@keyframes collection-current { to { stroke-dashoffset: -700; } }
+@keyframes collection-matter { to { transform: rotate(-15deg) scale(.97); } }
+@media (max-width:1024px),(max-height:649px) {
+  .authored-collection .project-frame { grid-template-columns: 57% 43%; }
+  .authored-collection .projects-world { inset: 0 38% auto 0; height: 480px; }
+  .authored-collection .game-preview, .authored-preview { min-height: 420px; }
+}
+@media(max-width:600px) {
+  .authored-collection .project-frame { grid-template-columns: 1fr; }
+  .authored-collection .project-context.project-context { padding: 20px 0 0; }
+  .authored-collection .projects-world { inset: 0 0 auto; height: 340px; }
+  .authored-collection .game-preview, .authored-preview { min-height: 340px; }
+  .authored-collection .game-preview-caption { padding: 24px 12px 5px; }
+  .authored-collection .selected-preview.selected-preview { min-height: 340px; padding: 0; }
+  .case-page > .authored-preview { min-height: 400px; height: 55svh; }
+  .gallery-page .fenda-controls { grid-template-columns: 1fr; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .authored-field, .authored-field path { animation: none !important; }
+}

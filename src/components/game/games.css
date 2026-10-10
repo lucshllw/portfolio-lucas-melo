@@ -1,0 +1,58 @@
+.game-overlay .game-actions button,
+.game-overlay .game-state button {
+  min-height: 44px;
+  min-width: 44px;
+}
+.game-overlay .game-stage {
+  position: relative;
+}
+.game-overlay .game-state {
+  padding: 56px 20px 20px;
+}
+.game-overlay .checkpoint-label {
+  pointer-events: none;
+  max-width: calc(100% - 40px);
+}
+.game-overlay .game-actions button:disabled {
+  opacity: 0.4;
+}
+.game-overlay .touch-controls button {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+.game-overlay .touch-controls button:active:not(:disabled) { background: #c7cdd3; color: #050505; transform: translateY(2px); }
+.game-overlay .touch-controls button:disabled { opacity: 0.4; }
+.game-overlay .fragment-progress { display: flex; gap: 6px; margin-top: 12px; }
+.game-overlay .fragment-progress i { width: 20px; height: 4px; background: #41474e; transform: skew(-28deg); transition: background 150ms; }
+.game-overlay .fragment-progress i[data-found="true"] { background: #f1f3f5; }
+.game-overlay .game-footer small {
+  max-width: 580px;
+  line-height: 1.5;
+}
+@media (max-width: 600px) {
+  .game-overlay .game-header {
+    padding: 14px 16px;
+    min-height: 124px;
+    gap: 12px;
+  }
+  .game-overlay .game-actions {
+    width: 100%;
+    gap: 8px;
+  }
+  .game-overlay .game-actions button {
+    flex: 1;
+    padding: 8px;
+  }
+  .game-overlay .game-state p {
+    font-size: 13px;
+    max-width: 310px;
+  }
+  .game-overlay .game-footer {
+    min-height: 150px;
+    padding: 12px 16px max(12px, env(safe-area-inset-bottom));
+  }
+  .game-overlay .game-footer p {
+    font-size: 11px;
+  }
+}

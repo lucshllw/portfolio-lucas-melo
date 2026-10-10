@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 310" role="img" aria-label="Criatura violeta com corpo dobrado e braços articulados">
+  <defs>
+    <radialGradient id="violet-skin" cx="34%" cy="24%" r="82%">
+      <stop stop-color="#AE79F0"/><stop offset=".28" stop-color="#8543D4"/>
+      <stop offset=".68" stop-color="#7133C5"/><stop offset="1" stop-color="#32116D"/>
+    </radialGradient>
+    <linearGradient id="violet-fold" x2=".8" y2="1">
+      <stop stop-color="#B58BEF"/><stop offset=".25" stop-color="#8040CE"/><stop offset="1" stop-color="#4C1D95"/>
+    </linearGradient>
+    <linearGradient id="violet-foot" x2="0" y2="1"><stop stop-color="#6D39B5"/><stop offset="1" stop-color="#2B1059"/></linearGradient>
+    <radialGradient id="violet-socket"><stop stop-color="#1A111E"/><stop offset="1" stop-color="#4C1D95"/></radialGradient>
+  </defs>
+  <ellipse cx="130" cy="291" rx="67" ry="9" fill="#141619" opacity=".65"/>
+  <path d="M61 118C42 116 37 140 43 163C47 179 59 183 66 169C71 154 77 123 61 118Z" fill="url(#violet-skin)"/>
+  <path d="M199 118C218 116 223 140 217 163C213 179 201 183 194 169C189 154 183 123 199 118Z" fill="url(#violet-skin)"/>
+  <path d="M95 245Q80 256 88 277H111Q118 253 106 244Z" fill="url(#violet-foot)"/>
+  <path d="M163 244Q150 253 157 277H180Q188 256 173 245Z" fill="url(#violet-foot)"/>
+  <path d="M82 26C89 25 91 49 118 64C176 69 204 99 204 158C203 212 179 246 132 249C85 251 55 214 55 162C54 111 56 59 82 26Z" fill="url(#violet-skin)"/>
+  <path d="M69 79C99 80 143 96 183 113" fill="none" stroke="#4C1D95" stroke-width="2.5" opacity=".55"/>
+  <path d="M71 76C106 80 142 94 182 110" fill="none" stroke="#C4A0F6" stroke-width="2" opacity=".4"/>
+  <ellipse cx="105" cy="142" rx="13" ry="18" transform="rotate(-4 105 142)" fill="url(#violet-socket)" stroke="#4C1D95" stroke-width="2"/>
+  <ellipse cx="154" cy="142" rx="13" ry="18" transform="rotate(4 154 142)" fill="url(#violet-socket)" stroke="#4C1D95" stroke-width="2"/>
+  <ellipse cx="105" cy="142" rx="8" ry="13" fill="#111015"/>
+  <ellipse cx="154" cy="142" rx="8" ry="13" fill="#111015"/>
+  <ellipse cx="102" cy="137" rx="2.3" ry="3" fill="#F1F3F5"/>
+  <ellipse cx="151" cy="137" rx="2.3" ry="3" fill="#F1F3F5"/>
+  <path d="M118 171Q130 178 142 169" fill="none" stroke="#18101E" stroke-width="3" stroke-linecap="round"/>
+  <path d="M80 278C78 269 88 264 101 264C115 264 122 273 119 283Q99 290 81 284Z" fill="url(#violet-foot)" stroke="#6C39B2" stroke-width="1.5"/>
+  <path d="M146 278C144 269 154 264 167 264C181 264 188 273 185 283Q165 290 147 284Z" fill="url(#violet-foot)" stroke="#6C39B2" stroke-width="1.5"/>
+</svg>
